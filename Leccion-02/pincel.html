@@ -1,0 +1,56 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var puedoDibujar = false;
+    var xRojo = 0;
+    var xVarde = 50;
+    var xAzul = 100;
+    var yCuadrado = 0;
+    var tamanhoCuadrado = 50;
+    
+
+
+    function dibujarCuadrado(x, y, color){
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y, 50, 50);
+    }
+    dibujarCuadrado(0,0,"red");
+    dibujarCuadrado(50,0,"green");
+    dibujarCuadrado(100,0,"blue");
+
+    function dibujarCirculo(evento) {
+
+        if(puedoDibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pincel.fillStyle = colores[indice];
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+
+    }
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    function habilitarDibujar() {
+
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+
+        puedoDibujar = false;
+    }
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+</script>

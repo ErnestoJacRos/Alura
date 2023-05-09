@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrellas</title>
+</head>
+<body>
+    <h1>Programa Estrellas  </h1>
+</body>
+</html>
+<script>
+    function saltoLinea(){
+        document.write("<br><br><br>");
+    }
+    function imprimir(frase){
+        document.write(frase);
+      // saltoLinea();
+    }
+
+    for(var lineas = 1; lineas <= 3; lineas++ ){
+        for(var columnas = 1; columnas <= 10; columnas++){
+            imprimir("*");
+        }
+        document.write("<br>")
+    }
+
+</script>

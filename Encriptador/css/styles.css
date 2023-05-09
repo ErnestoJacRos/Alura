@@ -1,0 +1,130 @@
+
+body{
+    background-color: #000814;
+}
+header{
+    background-color:  #ffd60a;
+    border-radius: 10px;
+    
+
+}
+h1{
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 40px;
+    color: #001d3d;
+    margin-top: 10px;
+
+}
+section{
+    width: 100%;
+     
+    box-sizing: border-box;
+}
+
+section .contenedor1, .contenedor2{
+    display: inline-block;
+}
+.contenedor1 img{
+    width: 10%;
+}
+.contenedor1 textarea{
+    box-sizing: border-box;
+    float: left;
+
+    margin-left: 100px;
+    margin-top: 20px;
+    resize: none;
+    background-color: rgba(245, 245, 245, 0.041);
+    border: none;
+   color: #ffd60a;
+   font-size: 18px;
+   padding: 16px 32px;
+   border-radius: 10px;
+
+   
+}
+
+.contenedor1 textarea::placeholder{
+    color: white;
+    font-size: 1.5rem;
+}
+.contenedor2{
+    box-sizing: border-box;
+    float: right;
+}
+.contenedor2 #salida{
+    display: none;
+    margin-top: 20px;
+    background-color: rgba(245, 245, 245, 0.041);
+    resize: none;
+    border: none;
+    margin-right: 30px;
+    border-radius: 10px;
+    color: #ffd60a;
+}
+
+#copiar{
+    display: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #ffd60a;
+    font-size: 13px;
+   
+    font-weight: bold;
+    margin-top: 10px;
+}
+#copiar:hover {
+    border: 2px solid #ffd60a;
+    font-size: 15px;
+    background-color: #000814;
+    color: #ffd60a;
+    width: 110px;
+    height: 50px;
+}
+.botones button{
+    margin-left: 100px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #ffd60a;
+    font-size: 13px;
+   
+    font-weight: bold;
+    margin-top: 10px;
+    
+    
+}
+.botones button:hover{
+    border: 2px solid #ffd60a;
+    font-size: 15px;
+    background-color: #000814;
+    color: #ffd60a;
+    width: 110px;
+    height: 50px;
+}
+.img{
+   margin-top: 30px;
+    float: right;
+   margin-right: 30px;
+}
+#paUno, #PaDos{
+    text-align: center;
+    color: #ffd60a;
+}
+#paUno{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+footer p{
+    
+    text-align: center;
+    color: #ffd60a;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+footer p:hover{
+ font-size: 20px;   
+}

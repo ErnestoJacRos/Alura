@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1><img src="/img/Logo.png" alt="logo" title="logo"></h1>
+            <h1 style="text-align: center; padding:10px ;
+            vertical-align: top;">Encriptador de Mensajes</h1>
+        </div>
+    </header>
+    <main>
+     <section >
+        <div class="contenedor1">
+            <textarea name="entrada" id="entrada" cols="60" rows="17" placeholder="Ingrese su texto"></textarea>
+        </div>
+        
+        
+     
+        <div class="contenedor2">
+            
+            <textarea name="salida" id="salida" cols="40" rows="25"></textarea>
+            <button type="button" id="copiar">Copiar</button>
+            
+        </div>
+
+        <div class="img" id="munheco">
+            <img src="/img/Muñeco (1).png" alt="">
+            <p id="paUno">Ningun mensaje fue encontrado</p>
+            <p id="PaDos">Ingresa el texto encriptar o desencriptar</p>
+        </div>
+
+        <div class="botones">
+            <button type="button" id="encriptar">Encriptar</button>
+            <button type="button" id="desencriptor">Desencriptar</button>
+            
+        </div>
+     </section>
+        
+    </main>
+    <footer>
+        <p>&#169; Ernesto Jacros</p>
+    </footer>
+
+</body>
+
+</html>
+<script>
+
+function encriptar() {
+    let frase = document.getElementById("entrada").value.toLowerCase();
+    let textoEncriptado = frase 
+    .replace(/e/img, "enter")
+      .replace(/i/img, "imes")
+      .replace(/a/img, "ai")
+      .replace(/o/img, "ober")
+      .replace(/u/img, "ufat");
+    document.getElementById("salida").innerHTML = textoEncriptado;
+    document.getElementById("copiar").style.display="show"
+    document.getElementById("copiar").style.display="inherit"
+
+    document.getElementById("salida").style.display="show"
+    document.getElementById("salida").style.display="inherit"
+
+    document.getElementById("munheco").style.display="none"
+    document.getElementById("paUno").style.display="none"
+    document.getElementById("paDos").style.display="none"
+    
+}
+
+  
+   let boton = document.querySelector("#encriptar");
+  boton.onclick = encriptar;
+
+  function desencriptar() {
+    let frase = document.getElementById("entrada").value.toLowerCase();
+    let textoEncriptado = frase 
+    .replace(/enter/img, "e")
+      .replace(/imes/img, "i")
+      .replace(/ai/img, "a")
+      .replace(/ober/img, "o")
+      .replace(/ufat/img, "u");
+    document.getElementById("salida").innerHTML = textoEncriptado;
+    
+}
+let botonDos = document.querySelector("#desencriptor");
+  botonDos.onclick = desencriptar;
+  
+  function copiar(){
+    var resultado = document.querySelector("#salida");
+    resultado.select();
+    document.execCommand("copy");
+    alert("Se ha copiado el texto ")
+  }
+  let btnCopiar = document.querySelector("#copiar");
+  btnCopiar.onclick = copiar;
+
+</script>

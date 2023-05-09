@@ -1,0 +1,23 @@
+<script>
+    function esPalindromo(frase) {
+  // Convertir la frase en minúsculas y quitar los espacios
+  frase = frase.toLowerCase().replace(/ /g,'');
+
+  // Comparar la frase original con la frase invertida
+  for (var i = 0; i < frase.length/2; i++) {
+    if (frase[i] !== frase[frase.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Ejemplo de uso
+var frase = "Anita lava la tina";
+if (esPalindromo(frase)) {
+  console.log(frase + " es un palíndromo.");
+} else {
+  console.log(frase + " no es un palíndromo.");
+}
+
+</script>

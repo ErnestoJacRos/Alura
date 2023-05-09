@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares</title>
+</head>
+
+<body>
+    <h1>Numeros Pares </h1>
+</body>
+
+</html>
+<script>
+
+    function saltoLinea() {
+        document.write("<br><br><br>")
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltoLinea();
+    }
+    var contador = 0;
+    while (contador <= 100) {
+        if (contador % 2 == 0) {
+            imprimir("numero par = " + contador);
+        }
+        contador++;
+    }
+</script>
